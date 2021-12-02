@@ -7,13 +7,10 @@ import csv
 source = []
 
 with open('task1.csv', encoding="utf-8") as f:
-  date_reader = csv.reader(f)
-
-  for row in date_reader:
-    source.append(row[0])
+  source = [s.strip() for s in f.readlines()]
 
 print(source)
-print(date_reader)
+
 
 # source=["ねずこ","たんじろう","きょうじゅろう","ぎゆう","げんや","かなお","ぜんいつ"]
 
