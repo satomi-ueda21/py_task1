@@ -22,7 +22,7 @@ def search():
       print("リストに{}は存在しません。新しく追加します。".format(word))
       print(source)
       with open('task1.csv', 'a', encoding="utf-8") as f:
-        f.write(word)
+        f.write('\n' + word)
 
 if __name__ == "__main__":
     search()
