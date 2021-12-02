@@ -6,7 +6,7 @@ import csv
 # 検索ソース
 source = []
 
-with open('task1.csv', encoding="utf-8") as f:
+with open('task1.csv', mode='r', encoding="utf-8") as f:
   source = [s.strip() for s in f.readlines()]
 
 
@@ -21,6 +21,8 @@ def search():
       source.append(word)
       print("リストに{}は存在しません。新しく追加します。".format(word))
       print(source)
+      with open('task1.csv', 'a', encoding="utf-8") as f:
+        f.write(word)
 
 if __name__ == "__main__":
     search()
